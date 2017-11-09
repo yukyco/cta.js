@@ -1,16 +1,23 @@
+
 <!doctype html>
 <html class="no-js" lang="">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Animate your 'action-to-effect' paths!</title>
-		<meta name="author" content="Kushagra Gour">
+		<meta name="author" content="Yukyco, Web Creation portfolio, Web Designer">
 		<meta name="description" content="Animate any element onto another element.">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="image_src" href="hint.png"/>
+		<meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+        <link rel="image_src" href="hint.png"/>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+		
+	<link rel="stylesheet" href="demo.css">
+       <link rel="stylesheet" href="ist/jquery.flipster.min.css">
+	<script src="jquery.min.js"></script>
+    <script src="ist/jquery.flipster.min.js"></script>
+	
 		<style>
 		* {
 			box-sizing: border-box;
@@ -87,7 +94,7 @@
 		}
 		.tile:nth-child(2) { background: #4A90E2; }
 		.tile:nth-child(3) { background: #FFD200; }
-		.tile:nth-child(4) { background: #4CBB47; }
+		.tile:nth-child(4) { background: #ff6347; }
 		.tile:nth-child(5) { background: #362A6C; }
 		.tile:nth-child(6) { background: #4CBB47; }
 
@@ -205,8 +212,8 @@
 
 		<section class="section--white" style="margin-top: 40px;">
 			<h2>Bonjour! Konnichiwa!</h2>
-			<p>Navigation in tile based apps which is made with 'cta.js'(script).</p>
-			<small>Click any tile below ;)</small>
+			<p>Navigation in tile based apps which is made with 'cta.js'(script) and 'flipstar.js'.</p>
+			<small>Happy to see you here !</small>
 			<div class="tile-container">
 				<div class="tile" data-cta-target=".js-modal-1" data-disable-scroll=true></div>
 				<div class="tile" data-cta-target=".js-modal-2" data-disable-scroll=true></div>
@@ -218,45 +225,99 @@
 			</div>
 		</section>
 
-		<section class="section--white">
-			<p>Opening modals on button clicks</p>
-			<div class="btn" data-cta-target=".js-dialog" data-disable-scroll=true style="background-image: url('http://yukycohamabe.ciao.jp/oswt/jsdoit/NamiStar/')>Click for awesomeness</div>
-		</section>
+		<article id="demo-default" class="demo">
 
-		<section class="section--white">
+    <h2>Coverflow Slideshow</h2>
+
+ <div id="coverflow">
+        <ul class="flip-items">
+            <li data-flip-title="Red">
+                <img srcset="../oswt/jsdoit/BL00/img/ss_BL00.jpg 320w,
+          ../oswt/jsdoit/BL00/img/s_BL00.jpg 640w,
+          ../oswt/jsdoit/BL00/img/BL00.png 1280w"
+     src="../oswt/jsdoit/BL00/img/BL00.png"
+     sizes="(max-width:1280px) 100vw, 1280px">
+            </li>
+            <li data-flip-title="Razzmatazz" data-flip-category="Purples">
+                <img srcset="../oswt/jsdoit/JellyFish/img/ss_JF.jpg 320w,
+          ../oswt/jsdoit/JellyFish/img/s_JF.jpg 640w,
+          ../oswt/jsdoit/JellyFish/img/JF.png 1280w"
+     src="../oswt/jsdoit/JellyFish/img/JF.png"
+     sizes="(max-width:1280px) 100vw, 1280px">
+             </li>
+            <li data-flip-title="Deep Lilac" data-flip-category="Purples">
+                <img srcset="../oswt/jsdoit/SlowYaRoll/img/ss_slow-yall.jpg 320w,
+          ../oswt/jsdoit/SlowYaRoll/img/s_slow-yall.jpg 640w,
+          ../oswt/jsdoit/SlowYaRoll/img/slow-yall.png 1280w"
+     src="../oswt/jsdoit/SlowYaRoll/img/slow-yall.png"
+     sizes="(max-width:1280px) 100vw, 1280px">
+            </li>
+            <li data-flip-title="Daisy Bush" data-flip-category="Purples">
+                <img srcset="../oswt/jsdoit/NamiStar/img/ss_NAMI_final.jpg 320w,
+          ../oswt/jsdoit/NamiStar/img/s_NAMI_final.jpg 640w,
+          ../oswt/jsdoit/NamiStar/img/NAMI_final.png 1280w"
+     src="../oswt/jsdoit/NamiStar/img/NAMI_final.png"
+     sizes="(max-width:1280px) 100vw, 1280px">
+            </li>
+            <li data-flip-title="Cerulean Blue" data-flip-category="Blues">
+                <img srcset="../oswt/jsdoit/RainyDay/img/ss_kq01.jpg 320w,
+          ../oswt/jsdoit/RainyDay/img/s_kq01.jpg 640w,
+          ../oswt/jsdoit/RainyDay/img/kq01.jpg 1280w"
+     src="../oswt/jsdoit/RainyDay/img/kq01.jpg"
+     sizes="(max-width:1280px) 100vw, 1280px">
+            </li>
+        </ul>
+    </div>
+
+<script>
+    var coverflow = $("#coverflow").flipster();
+</script>
+
+<pre class="code">$("#coverflow").flipster();</pre>
+
+</article>
+
+
+		<!--<section class="section--white">
 			<p>Opening sidebars</p>
 			<div class="btn" data-cta-target=".js-sidebar">Open the Sidebar</div>
 		</section>
 		<section class="section--white">
 			<p>And just about anything...imagination is the limit</p>
-		</section>
+		</section>-->
 
 
 		<section>
-			<h4>Do you love this web site ? You can get by forking !</h4>
-			<p>Improve your skill by using <strong>cta.js</strong>. <br />
-			Use Google Material Design below.</p>
+			<h4>Do you like this web site ? You can get by forking !</h4>
+			<p>Improve your skill by using <strong>cta.js</strong> and <strong>flipstar.js</strong>. <br />
+			Fork on them on GitHub</p>
 			<div class="quote-box">
-				<div class="quote-box__bubble">Carefully choreographed motion design can effectively guide the user’s attention and focus through multiple steps of a process or procedure, avoid confusion when layouts change or elements are rearranged, and improve the overall beauty of the experience.</div>
-				<a href="http://www.google.co.in/design/spec/animation/meaningful-transitions.html">Google Material Design</a>
+			  <div class="quote-box__bubble">
+    				Give the palpitation to your website with beautiful JavaScript!
 			</div>
 		</section>
 
-		<section class="section--white">
-			<h4>Browser Support</h4>
-
-			<div class="content-wrap">
-			cta.js currently works only in Google Chrome browser. Other modern browsers are to be supported next.
-			<br><br>
-			For all non-supported browsers, the library does nothing and fallbacks to normal behavior without any explicit handling in your code.
+                <section>
+			<h4>If you enjoyed this web page, you might also like :</h4>
+			<div class="quote-box">
+			<div class="quote-box__bubble">
+    			Please Come to see my website => <a href="http://yukycohamabe.ciao.jp/free-bootstrap/">Theme Geneva</a> <br />
+			Please Come to see our website => <a href="http://yukycohamabe.ciao.jp/oswt/jsdoit/BL00/">Anime</a>
 			</div>
 		</section>
+
 
 		<div class="js-modal-1  modal  modal--1">
 			<span class="modal-close-btn"></span>
-			<h1></h1>
-			<img src="http://jsrun.it/assets/k/e/K/x/keKxx.png" width="600" alt="">
-			<p></p>
+			<h1>what artistically fork on 'Slow Ya Roll'</h1>
+			<a href="../oswt/jsdoit/SlowYaRoll/">
+    			<img srcset="../oswt/jsdoit/SlowYaRoll/img/ss_slow-yall.jpg 320w,
+          ../oswt/jsdoit/SlowYaRoll/img/s_slow-yall.jpg 640w,
+          ../oswt/jsdoit/SlowYaRoll/img/slow-yall.png 1280w"
+     src="../oswt/jsdoit/SlowYaRoll/img/slow-yall.png"
+     sizes="(max-width:1280px) 100vw, 1280px"></a>
+
+			<p>Click the pic!</p>
 		</div>
 		</div>
 		<div class="js-modal-2  modal  modal--2">
@@ -265,43 +326,69 @@
 			<br><br>
 			<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-via="YukikoDeveloper" data-related="YukikoDeveloper" data-hashtags="animate,javascript">Tweet</a>
 		</div>
+		
 		<div class="js-modal-3  modal  modal--3">
 			<span class="modal-close-btn"></span>
-			<h1></h1>
-			<img src="http://yukycohamabe.ciao.jp/oswt/img/JF.png" width="600" alt="">
-			<p></p>
+			<h1>what artistically fork on 'Jellyfish'</h1>
+			<a href="../oswt/jsdoit/JellyFish/">
+			<img srcset="../oswt/jsdoit/JellyFish/img/ss_JF.jpg 320w,
+          ../oswt/jsdoit/JellyFish/img/s_JF.jpg 640w,
+          ../oswt/jsdoit/JellyFish/img/JF.png 1280w"
+     src="../oswt/jsdoit/JellyFish/img/JF.png"
+     sizes="(max-width:1280px) 100vw, 1280px"></a>
+			<p>Click the pic!</p>
 		</div>
+
+
 		<div class="js-modal-4  modal  modal--4">
 			<span class="modal-close-btn"></span>
-
-			<h1></h1>
-			<img src="http://yukycohamabe.ciao.jp/oswt/img/BL00.png" width="600" alt="">
-			<p></p>
+			<h1>what artistically fork on 'Bamboo's Lament'</h1>
+			<a href="../oswt/jsdoit/BL00/">
+			<img srcset="../oswt/jsdoit/BL00/img/ss_BL00.jpg 320w,
+          ../oswt/jsdoit/BL00/img/s_BL00.jpg 640w,
+          ../oswt/jsdoit/BL00/img/BL00.png 1280w"
+     src="../oswt/jsdoit/BL00/img/BL00.png"
+     sizes="(max-width:1280px) 100vw, 1280px"></a>
+			<p>Click the pic!</p>
 			</div>
 		</div>
+		
 		<div class="js-modal-5  modal  modal--5">
 			<span class="modal-close-btn"></span>
-
-			<h1></h1>
-			<img src="http://yukycohamabe.ciao.jp/oswt/img/small-child.png" width="600" alt="">
-			<p></p>
+			<h1>what artistically fork on 'Children Of The Corn'</h1>
+			<a href="../oswt/jsdoit/EvaCorn/">
+			<img srcset="../oswt/jsdoit/EvaCorn/img/ss_small-child.jpg 320w,
+          ../oswt/jsdoit/EvaCorn/img/s_small-child.jpg 640w,
+          ../oswt/jsdoit/EvaCorn/img/small-child.png 1280w"
+     src="../oswt/jsdoit/EvaCorn/img/small-child.png"
+     sizes="(max-width:1280px) 100vw, 1280px"></a>
+			<p>Click the pic!</p>
 			</div>
 		</div>
 
 		<div class="js-modal-6  modal  modal--6">
 			<span class="modal-close-btn"></span>
+			<h1>what artistically fork on 'Nami'</h1>
+			<a href="../oswt/jsdoit/NamiStar/">
+			<img srcset="../oswt/jsdoit/NamiStar/img/ss_NAMI_final.jpg 320w,
+          ../oswt/jsdoit/NamiStar/img/s_NAMI_final.jpg 640w,
+          ../oswt/jsdoit/NamiStar/img/NAMI_final.png 1280w"
+     src="../oswt/jsdoit/NamiStar/img/NAMI_final.png"
+     sizes="(max-width:1280px) 100vw, 1280px"></a>
 
-			<h1></h1>
-			<img src="http://jsrun.it/assets/K/h/a/H/KhaHI.png" width="600" alt="">
-			<p></p>
+			<p>Click the pic!</p>
 			</div>
 			
 		<div class="js-modal-7  modal  modal--7">
 			<span class="modal-close-btn"></span>
-
-			<h1></h1>
-			<img src="http://yukycohamabe.ciao.jp/oswt/img/kq01.jpg" width="600" alt="">
-			<p></p>
+			<h1>what artistically fork on Killa Queens</h1>
+			<a href="../oswt/jsdoit/RainyDay/">
+			<img srcset="../oswt/jsdoit/RainyDay/img/ss_kq01.jpg 320w,
+          ../oswt/jsdoit/RainyDay/img/s_kq01.jpg 640w,
+          ../oswt/jsdoit/RainyDay/img/kq01.jpg 1280w"
+     src="../oswt/jsdoit/RainyDay/img/kq01.jpg"
+     sizes="(max-width:1280px) 100vw, 1280px"></a>
+			<p>Click the pic!</p>
 		</div>	
 		
 		</div>
@@ -314,6 +401,11 @@
 			<div class="sidebar__block" style="height:10%"></div>
 		</div>
 
+        <div>
+            <h1>jQuery Flipster</h1>
+    <iframe src="https://ghbtns.com/github-btn.html?user=drien&repo=jquery-flipster&type=star&count=true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+            </div>
+            
 		<footer>
 			Forked by <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-via="YukikoDeveloper" data-related="chinchang457" data-hashtags="animate,javascript">Tweet</a>
 
